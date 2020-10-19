@@ -1,0 +1,25 @@
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  executor-type: reuse
+  configuration:
+    log-impl: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl
+    cache-enabled: false
+    use-generated-keys: false
+    map-underscore-to-camel-case: true
+    default-executor-type: reuse
+    default-statement-timeout: 600
+  global-config:
+    banner: false
+    db-config:
+      table-prefix: t_
+      table-underline: true
+
+spring:
+  datasource:
+    name: mysql_chengf
+    username: root
+    password: sso
+    url: jdbc:mysql://localhost:3307/chengf?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: transaction-singledb
