@@ -1,10 +1,9 @@
 package com.chengf.transaction.multidb.service;
 
 
-import com.chengf.transaction.multidb.dao.DepartMentMapper;
-import com.chengf.transaction.multidb.dao.UserMapper;
 import com.chengf.transaction.multidb.domain.Department;
 import com.chengf.transaction.multidb.domain.User;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,30 +13,25 @@ import org.springframework.transaction.annotation.Transactional;
  * @date 2020年10月12日 上午11:54
  */
 @Service
+@Slf4j
 public class DbService {
 
 
     @Autowired
-    UserMapper userMapper;
+    UserService userService;
 
     @Autowired
-    DepartMentMapper departMentMapper;
-
+    DepartmentService departmentService;
 
     @Transactional(rollbackFor = Exception.class)
     public  void commit(User user, Department department) {
 
-        if (user.getAge() < 10) {
-            throw new RuntimeException("age less than 10");
-        }
+        log.info("=============tx begin=================");
 
-        userMapper.insert(user);
 
-        if(department.getId() == null) {
-            throw new RuntimeException("department id is null");
-        }
+        userService.addUser(user);
 
-        departMentMapper.insert(department);
+        departmentService.addDepartment(department);
 
     }
 
