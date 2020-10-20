@@ -19,7 +19,7 @@ public class UserService {
     UserMapper userMapper;
 
     public void addUser(User user) {
-        log.info("=============user=================");
+        log.info("=============user tx begin=================");
         log.info("当前 XID: {}", RootContext.getXID());
 
         if (user.getAge() < 10) {

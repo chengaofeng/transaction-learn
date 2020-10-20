@@ -6,6 +6,6 @@ import com.chengf.transaction.multidb.seata.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-@DS("mysql_chengf3307")
+@DS("mysql_chengf3306")
 public interface UserMapper extends BaseMapper<User> {
 }

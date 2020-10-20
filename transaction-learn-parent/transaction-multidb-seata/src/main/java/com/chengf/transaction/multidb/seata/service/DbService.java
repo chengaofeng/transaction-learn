@@ -30,7 +30,7 @@ public class DbService {
     @GlobalTransactional(rollbackFor = Exception.class)
     public  void commit(User user, Department department) {
 
-        log.info("=============tx begin=================");
+        log.info("============= tx begin=================");
         log.info("当前 XID: {}", RootContext.getXID());
 
         userService.addUser(user);

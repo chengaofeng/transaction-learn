@@ -10,6 +10,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2020年10月12日 上午11:56
  */
 @Mapper
-@DS("mysql_chengf3306")
+@DS("mysql_chengf3307")
 public interface DepartMentMapper extends BaseMapper<Department> {
 }
