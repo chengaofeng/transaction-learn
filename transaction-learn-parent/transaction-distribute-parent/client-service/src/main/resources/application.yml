@@ -1,0 +1,10 @@
+
+spring:
+  application:
+    name: client-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: tx_distribute_group
+server:
+  port: 8080

@@ -13,6 +13,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>common-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -23,6 +29,13 @@
         </dependency>
 
 
+
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
+            <scope>compile</scope>
+        </dependency>
         <!-- pagehelper 分页实现，在调用查询前追加PageHelper.startPage(page, size);
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -36,6 +49,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>user-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>department-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
