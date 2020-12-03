@@ -44,7 +44,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
-            <scope>compile</scope>
         </dependency>
         <!-- pagehelper 分页实现，在调用查询前追加PageHelper.startPage(page, size);
         <dependency>

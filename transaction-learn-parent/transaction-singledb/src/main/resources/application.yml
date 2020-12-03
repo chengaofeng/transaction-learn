@@ -23,3 +23,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: transaction-singledb
+
+logging:
+  level:
+    root: trace

@@ -28,15 +28,17 @@ public class TransactionTest {
 
         User user = new User();
 
-        user.setName("cc");
+        user.setName("cc6");
         user.setAge(20);
 
         Department department = new Department();
 
         department.setName("dd");
 
-        department.setId("1");
+//        department.setId("6");
         dbService.commit(user,department);
+
+        System.out.println("OK");
 
 
     }
